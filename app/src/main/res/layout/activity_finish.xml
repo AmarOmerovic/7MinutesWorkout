@@ -24,14 +24,14 @@
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:layout_marginTop="20dp"
-        android:gravity="center"
-        android:background="@drawable/end_image_circular_shape">
+        android:background="@drawable/end_image_circular_shape"
+        android:gravity="center">
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:srcCompat="@drawable/ic_baseline_check_24"
-            android:contentDescription="@string/finish" />
+            android:contentDescription="@string/finish"
+            app:srcCompat="@drawable/ic_baseline_check_24" />
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 
@@ -54,16 +54,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
-        android:backgroundTint="@color/white"
+        android:backgroundTint="@color/red"
         android:minHeight="60dp"
         android:shadowColor="@color/black"
         android:shadowDx="2"
         android:shadowDy="2"
         android:shadowRadius="2"
         android:text="@string/finish"
-        android:textColor="@color/blue"
+        android:textColor="@color/white"
         android:textSize="20sp"
-        android:textStyle="bold"
-        app:strokeColor="@color/red"
-        app:strokeWidth="3dp" />
+        android:textStyle="bold" />
 </androidx.appcompat.widget.LinearLayoutCompat>

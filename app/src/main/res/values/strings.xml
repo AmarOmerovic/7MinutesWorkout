@@ -14,4 +14,21 @@
     <string name="this_will_stop_your_workout_you_ve_come_this_far_are_you_sure_you_want_to_quit">This will stop your workout. You\'ve come this far, are you sure you want to quit?</string>
     <string name="yes">Yes</string>
     <string name="no">No</string>
+    <string name="bmi">BMI</string>
+    <string name="stretch">Stretch</string>
+    <string name="workout">Workout</string>
+    <string name="history">History</string>
+    <string name="workout_a">Workout A</string>
+    <string name="workout_b">Workout B</string>
+    <string name="workout_plan_a">Workout plan A</string>
+    <string name="workout_plan_b">Workout plan B</string>
+    <string name="weight_in_kg">WEIGHT (in kg)</string>
+    <string name="height_in_cm">HEIGHT (in cm)</string>
+    <string name="calculate">Calculate</string>
+    <string name="your_bmi">YOUR BMI:</string>
+    <string name="metric_units">METRIC UNITS</string>
+    <string name="us_units">US UNITS</string>
+    <string name="feet">Feet</string>
+    <string name="inch">Inch</string>
+    <string name="workouts_completed">WORKOUTS COMPLETED</string>
 </resources>

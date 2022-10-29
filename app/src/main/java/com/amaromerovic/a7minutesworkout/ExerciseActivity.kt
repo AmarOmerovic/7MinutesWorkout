@@ -41,7 +41,11 @@ class ExerciseActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
         setSupportActionBar(binding.toolBar)
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        exerciseList = Constants.defaultExerciseList()
+        if (intent.getIntExtra(Constants.SELECTED_WORKOUT, -1) == 1) {
+            exerciseList = Constants.workoutA()
+        } else if (intent.getIntExtra(Constants.SELECTED_WORKOUT, -1) == 2) {
+            exerciseList = Constants.workoutB()
+        }
         textToSpeech = TextToSpeech(this, this)
         recyclerViewAdapter = ExerciseRecyclerViewAdapter(exerciseList)
 
