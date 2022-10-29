@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ExerciseActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolBar"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="@color/red"
+        android:theme="@style/ToolBarTheme"
+        app:layout_constraintTop_toTopOf="parent"
+        app:titleTextColor="@color/white" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:shadowColor="@color/black"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="2"
+        android:text="@string/get_ready_in"
+        android:textColor="@color/blue"
+        android:layout_marginBottom="5dp"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/frameLayout"
+        app:layout_constraintTop_toBottomOf="@+id/toolBar"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/start_button_shape"
+        app:layout_constraintBottom_toTopOf="@+id/upcomingText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title">
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:background="@drawable/circular_progress_bar_gray"
+            android:indeterminate="false"
+            android:max="10"
+            android:progress="100"
+            android:progressDrawable="@drawable/circular_progress_bar"
+            android:rotation="-90" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:background="@drawable/circular_background_color"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/textViewTimer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:shadowColor="@color/black"
+                android:shadowDx="5"
+                android:shadowDy="5"
+                android:shadowRadius="2"
+                android:textColor="@color/white"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                tools:text="10" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </FrameLayout>
+
+
+    <TextView
+        android:id="@+id/upcomingText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:shadowColor="@color/black"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="2"
+        android:text="@string/upcoming_exercise"
+        android:textColor="@color/lightGray"
+        android:layout_marginBottom="5dp"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/upComingExercise"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frameLayout" />
+
+    <TextView
+        android:id="@+id/upComingExercise"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:shadowColor="@color/black"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="2"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/upcomingText"
+        tools:layout_editor_absoluteX="27dp" />
+
+    <TextView
+        android:id="@+id/exerciseName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:gravity="center"
+        android:shadowColor="@color/black"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="2"
+        android:textColor="@color/blue"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/exerciseFrameLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/exerciseImage"
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:text="EXERCISE NAME" />
+
+    <ImageView
+        android:id="@+id/exerciseImage"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="100dp"
+        android:contentDescription="@string/exercise"
+        android:scaleType="fitCenter"
+        android:src="@drawable/high_knees_running_in_place"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/exerciseName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolBar"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <FrameLayout
+        android:id="@+id/exerciseFrameLayout"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/start_button_shape"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/exerciseName">
+
+        <ProgressBar
+            android:id="@+id/exerciseProgressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:background="@drawable/circular_progress_bar_gray"
+            android:indeterminate="false"
+            android:max="30"
+            android:progress="300"
+            android:progressDrawable="@drawable/circular_progress_bar"
+            android:rotation="-90" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:background="@drawable/circular_background_color"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/textViewExerciseTimer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:shadowColor="@color/black"
+                android:shadowDx="5"
+                android:shadowDy="5"
+                android:shadowRadius="2"
+                android:textColor="@color/white"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                tools:text="30" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

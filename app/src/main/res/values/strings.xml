@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">7MinutesWorkout</string>
+    <string name="app_logo">App logo</string>
+    <string name="start">Start</string>
+    <string name="get_ready_in">GET READY IN</string>
+    <string name="exercise">Exercise</string>
+    <string name="upcoming_exercise">UPCOMING EXERCISE:</string>
+</resources>
