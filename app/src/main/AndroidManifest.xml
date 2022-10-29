@@ -11,6 +11,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.7MinutesWorkout">
         <activity
+            android:name=".FinishActivity"
+            android:exported="false"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".ExerciseActivity"
             android:exported="false"
             android:screenOrientation="portrait">
